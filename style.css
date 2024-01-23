@@ -1,0 +1,95 @@
+html,
+*{
+--background: #000000;
+--dark: #ab1677;
+--light: #f3d8e3;
+--spacing-unit: 8px;
+background-color: var(--background);
+margin: 0;
+}
+
+
+.title {
+    padding-top: calc(2 * var(--spacing-unit));
+    padding-bottom: calc(2 * var(--spacing-unit));
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; /* Maximum width of the title */
+    color: var(--light); /* If you want the title color to be light */
+  }
+  
+body {
+    background-color: var(--background);
+    margin: 0;
+    font-family: Arial, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    color: var(--light);
+   
+  }
+
+  
+* {
+box-sizing: border-box; /* Recommended to ensure padding and border are included in the element's total width and height */
+}
+
+#home {
+    background: url('images/home.jpg') no-repeat center center;
+    background-size: cover; /* Cover the entire section */
+    position: relative; /* Establish a positioning context for z-index */
+    z-index: 1; /* Ensure this layer is below the content */
+}
+
+#home .title, 
+#home .quote {
+    position: relative; /* Required for z-index to take effect */
+    z-index: 2; /* Higher z-index, appears above the background image */
+    color: var(--light); /* Adjust color to ensure text is readable against the background */
+    /* Your other styles... */
+}
+
+.title, .quote {
+    background-color: transparent; /* No background */
+    padding: 0; /* No padding */
+  }
+.section {
+
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    padding: var(--spacing-unit);
+    
+  }
+
+
+  
+
+  .music-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.music-item {
+    margin: 1em;
+    width: calc(100% / 3 - 2em); /* Adjust width as needed */
+}
+
+
+
+.music-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+}
