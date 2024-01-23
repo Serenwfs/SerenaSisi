@@ -52,6 +52,7 @@ box-sizing: border-box; /* Recommended to ensure padding and border are included
     background-color: transparent; /* No background */
     padding: 0; /* No padding */
   }
+
 .section {
 
     height: 100vh; /* Full height of the viewport */
@@ -63,9 +64,6 @@ box-sizing: border-box; /* Recommended to ensure padding and border are included
     padding: var(--spacing-unit);
     
   }
-
-
-  
 
   .music-list {
     list-style-type: none;
