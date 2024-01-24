@@ -2,72 +2,159 @@ html,
 *{
 --background: #000000;
 --dark: #ab1677;
---light: #f3d8e3;
+--light: #f9d9f5;
 --spacing-unit: 8px;
+--hover: #8d0b32;
 background-color: var(--background);
 margin: 0;
 }
 
 
+.section {
+    position: relative; /* Allows absolute positioning relative to this container */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0; /* Reset margins for all children within the section */
+    padding: 0; /* Reset padding for all children within the section */
+}
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Preserve aspect ratio while covering the entire section */
+    position: relative;
+    object-position: left 0 top 5px;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Behind the text-overlay */
+}
+
+
+.title, .quote {
+    position: absolute;
+    background-color: transparent; /* Ensure there's no background */
+    padding: 0; /* Ensure there's no padding */
+    margin: 0; /* Ensure there's no margin */
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.quote {
+    
+    position: absolute ;
+    top: 1%; /* Adjust the value to position the quote from the top of the page */
+    /* left: 50%;  */
+    z-index: 6; /* High z-index to ensure it's above other content */
+    padding: 0; /* Optional: padding around the text */
+    /* text-align: center;  */
+    font-size: 2.1rem;
+}
 .title {
-    padding-top: calc(2 * var(--spacing-unit));
-    padding-bottom: calc(2 * var(--spacing-unit));
-    font-size: 2.5rem;
-    line-height: 1;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px; /* Maximum width of the title */
-    color: var(--light); /* If you want the title color to be light */
+    /* position: absolute;  */
+    font-size: 6rem;
+    max-width: 800px;
+    top: 40%; /* Adjust the value to position the quote from the top of the page */
+    /* left: 50%;  */
+}
+
+.social-media-bar {
+    position: absolute;
+    background-color: var(--background); 
+    right: 2%;
+    transform: translateY(-50%);
+    bottom: 0;
+    z-index: 1000; /* Ensures the social bar stays on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .social-media-bar img {
+    
+    width: 30px; /* Adjust this value to make the icons smaller */
+    height: auto; /* This will maintain the aspect ratio of the images */
+    display: block;
+    margin: 8px 0; /* Adjust the margin as needed for spacing */
   }
   
 body {
     background-color: var(--background);
     margin: 0;
-    font-family: Arial, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: "Allison", cursive;
     color: var(--light);
+    font-size: 2rem;
    
   }
 
+header{
+color: var(--background);
+}
+
+.nav-bar {
+position: absolute;
+list-style-type: none;
+display: flex;
+justify-content: center;
+align-items: center;
+bottom: 0%;
+flex-direction: row;
+left: 0;
+width: 100%;
+height: 50px;
+background: var(--light); /* This is the pink color from your variables */
+z-index: 10;
+}
+
+.nav-bar li {
+    margin: 125px; /* Adjust space between navigation items */
+    background: transparent; /* No background color */
+    font-size: 2.3rem;
+}
+
+.nav-bar a {
+    color: var(--background); /* Black text color */
+    text-decoration: none; /* No underline */
+    padding: 0; /* Adjust padding to your preference */
+    /* border-radius: 10px; Rounded corners for the links */
+    display: flex; /* Use flex to center text in the 'a' element */
+    align-items: center; /* Vertical centering inside the 'a' element */
+    justify-content: center; /* Horizontal centering inside the 'a' element */
+    background-color: transparent;
+}
+
+.nav-bar a:visited {
+    background: transparent; /* No background color *
+    color: var(--background); /* Keeps the link color black even after being clicked */
+}
+
+/* Styling for active state */
+.nav-bar a:active {
+    background: transparent; /* No background color *
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker effect for an active link */
+    color: var(--background); /* Maintain the text color */
+}
+
+
+/* Styling for hover state */
+.nav-bar a:hover {
+    background: transparent; 
+    color: var(--hover); /* Maintain the text color */
+}
   
 * {
-box-sizing: border-box; /* Recommended to ensure padding and border are included in the element's total width and height */
+box-sizing: border-box; 
 }
 
-#home {
-    background: url('images/home.jpg') no-repeat center center;
-    background-size: cover; /* Cover the entire section */
-    position: relative; /* Establish a positioning context for z-index */
-    z-index: 1; /* Ensure this layer is below the content */
-}
 
-#home .title, 
-#home .quote {
-    position: relative; /* Required for z-index to take effect */
-    z-index: 2; /* Higher z-index, appears above the background image */
-    color: var(--light); /* Adjust color to ensure text is readable against the background */
-    /* Your other styles... */
-}
-
-.title, .quote {
-    background-color: transparent; /* No background */
-    padding: 0; /* No padding */
-  }
-
-.section {
-
-    height: 100vh; /* Full height of the viewport */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center;
-    padding: var(--spacing-unit);
-    
-  }
-
-  .music-list {
+.music-list {
     list-style-type: none;
-    padding: 0;
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -80,12 +167,10 @@ box-sizing: border-box; /* Recommended to ensure padding and border are included
     width: calc(100% / 3 - 2em); /* Adjust width as needed */
 }
 
-
-
 .music-item img {
     width: 100%;
     height: auto;
-    display: block;
+    /* display: block; */
 }
 
 figcaption {
