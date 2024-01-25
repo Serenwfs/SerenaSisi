@@ -407,7 +407,7 @@ figcaption {
     }
 
     .slide-btn{
-        bottom: 40%; 
+        bottom: 40%!important; 
     }
     
     .play-icon {
