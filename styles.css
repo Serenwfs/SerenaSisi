@@ -461,7 +461,7 @@ figcaption {
     }
     
     .slide-btn{
-        bottom: 30%; 
+        bottom: 25%; 
     }
     .slide-btn img, .play-icon {
         height: 50px; /* Larger buttons */
