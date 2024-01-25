@@ -439,8 +439,7 @@ figcaption {
 
     .slide-btn:hover, .play-link:hover, #prev:hover, #next:hover {
         background-color: none; /* grey color with opacity */
-        transition: background-color 0.3s ease; 
-        z-index: 12;
+        z-index: 1;
     }
 }
     
