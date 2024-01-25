@@ -407,7 +407,7 @@ figcaption {
     }
 
     .slide-btn{
-        bottom: 30%; 
+        bottom: 32%; 
     }
     
     .play-icon {
@@ -438,7 +438,9 @@ figcaption {
     }
 
     .slide-btn:hover, .play-link:hover, #prev:hover, #next:hover {
+        background-color: transparent; /* grey color with opacity */
         transition: background-color 0.3s ease; 
+        opacity: 0; /*over opacity*/
         z-index: 12;
     }
 }
