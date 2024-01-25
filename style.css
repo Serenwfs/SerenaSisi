@@ -342,7 +342,10 @@ figcaption {
     .background-image {
         height: 50vh; /* Reduce the height on medium screens */
     }
-
+    
+    body{
+        font-size: 4vw;
+    }
 
 
     /* Adjust padding, margins, and any other properties that need to change */
@@ -354,6 +357,10 @@ figcaption {
         font-size: 1rem; /* Even smaller font size for phones */
     }
     
+    body{
+        font-size: 2vw;
+    }
+
     .nav-bar li {
         margin: 10px; /* Even less space between navigation items */
     }
