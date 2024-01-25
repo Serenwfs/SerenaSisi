@@ -436,10 +436,11 @@ figcaption {
     #next {
         right: 35% ; /* adjust the position */
     }
+}
     
 
     /* Very large screens */
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
     .title, .quote {
         font-size: 3rem; /* Larger font size for larger screens */
     }
@@ -460,7 +461,7 @@ figcaption {
     }
     
     .slide-btn{
-        bottom:  35%; 
+        bottom:  40%; 
     }
     .slide-btn img, .play-icon {
         height: 50px; /* Larger buttons */
@@ -482,14 +483,12 @@ figcaption {
     }
 
     #Tour p{
-        font-size: 4rem;
+        font-size: 5rem;
         
     }
 
 
 }
 
-
-}
 
 
