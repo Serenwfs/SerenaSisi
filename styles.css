@@ -382,7 +382,7 @@ figcaption {
         font-size: 1.5rem; /* Even smaller font size for phones */
     }
     .title {
-        font-size: 5rem; /* Even smaller font size for phones */
+        font-size: 3rem; /* Even smaller font size for phones */
     }
     
     body{
@@ -407,7 +407,7 @@ figcaption {
     }
 
     .slide-btn{
-        bottom: 30%; 
+        bottom: 40%; 
     }
     
     .play-icon {
