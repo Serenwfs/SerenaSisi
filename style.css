@@ -340,7 +340,9 @@ figcaption {
     }
     
     .background-image {
-        height: 50vh; /* Reduce the height on medium screens */
+        /* height: 50vh; Reduce the height on medium screens */
+        object-position: center center;
+        object-fit: cover; 
     }
     
     body{
@@ -354,7 +356,7 @@ figcaption {
 /* Small screens (phones) */
 @media (max-width: 480px) {
     .title, .quote {
-        font-size: 1rem; /* Even smaller font size for phones */
+        font-size: 2rem; /* Even smaller font size for phones */
     }
     
     body{
@@ -370,7 +372,9 @@ figcaption {
     }
 
     .background-image {
-        height: 30vh; /* Further reduce the height on small screens */
+        /* height: 100vh; */
+        object-position: center center; 
+        object-fit: cover; 
     }
     .slide-btn img{
         height: 5vw !important; /* Larger percentage to maintain a usable size on small screens */
