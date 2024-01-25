@@ -26,7 +26,7 @@ margin: 0;
     height: 100vh;
     object-fit: cover; /* Preserve aspect ratio while covering the entire section */
     position: relative;
-    object-position: left 0 top 5px;
+    object-position: left 0  top 15%;
     top: 0;
     left: 0;
     z-index: 1; /* Behind the text-overlay */
@@ -62,35 +62,38 @@ margin: 0;
     /* left: 50%;  */
 }
 
+
 .social-media-bar {
     position: absolute;
-    background-color: var(--background); 
-    right: 2%;
-    transform: translateY(-50%);
-    bottom: 0;
-    z-index: 1000; /* Ensures the social bar stays on top */
+    background: var(--background); 
+    right: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 2; /* Ensures the social bar stays on top */
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   
 
-  .social-media-bar img {
+.social-media-bar img {
     
-    width: 30px; /* Adjust this value to make the icons smaller */
-    height: auto; /* This will maintain the aspect ratio of the images */
+   width: 25px; 
+    height: 25px;  
     display: block;
-    margin: 8px 0; /* Adjust the margin as needed for spacing */
+    margin: 20px 0; /* Adjust the margin as needed for spacing */
+    z-index: 2; 
   }
+
   
 body {
     background-color: var(--background);
     margin: 0;
     font-family: "Allison", cursive;
     color: var(--light);
-    font-size: 2rem;
+    font-size: 2rem;  
    
   }
+
 
 header{
 color: var(--background);
@@ -115,6 +118,7 @@ z-index: 10;
     margin: 125px; /* Adjust space between navigation items */
     background: transparent; /* No background color */
     font-size: 2.3rem;
+    z-index: 10;z-index: 10;
 }
 
 .nav-bar a {
@@ -152,27 +156,146 @@ box-sizing: border-box;
 }
 
 
+.section-title {
+    position: absolute;
+    top: 2%; /* Adjust based on your header/nav bar height */
+    margin-bottom: 20px; /* Space between title and grid */
+}
+
+/* 
+.music-slider {
+    position: relative;
+  } */
+
+.slide-btn {
+    position: absolute;
+    bottom: 20%; 
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer; 
+    z-index: 15; /* Make sure this is above other elements */
+  }
+
+.slide-btn img{
+    height: 40px;
+    width: 40px;
+}
+  
+  #prev {
+    left: 42% ; /* Adjust the position as needed */
+  }
+  
+  #next {
+    right: 42% ; /* Adjust the position as needed */
+  }
+  
+
+
 .music-list {
     list-style-type: none;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
+    text-align: center; 
     flex-direction: row;
     justify-content: center;
+    transition: transform 0.5s ease;
 }
 
 
 .music-item {
-    margin: 1em;
-    width: calc(100% / 3 - 2em); /* Adjust width as needed */
+    position: relative; /* Needed to position the play button absolutely within the figure */
+    display: flex; /* Use flexbox to center children */
+    align-items: center; /* Center children vertically */
+    justify-content: center; /* Center children horizontally */
 }
 
 .music-item img {
-    width: 100%;
-    height: auto;
-    /* display: block; */
+
+    width: 235px;
+    height: 235px;
+    right: 50%;
+    left: auto;
+     display: block;
+     z-index: 7;
+    transition: transform 0.5s; 
 }
+
+
+.play-link {
+    position: absolute; /* Position it absolutely within the figure */
+    bottom: -18%; /* Position it 50% from the top */
+    left: 50%; /* Position it 50% from the left */
+    transform: translate(-50%, -50%); /* Offset the element by half of its own width and height to center it */
+    display: none; /* Hide by default and show it only for the center item */
+    z-index: 3; /* Ensure it's above the image */
+}
+ /* Style for the play icon image */
+ .play-icon {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+.music-item.center {
+    transform: scale(1.2);
+    z-index: 2; /* Above other slides */
+    opacity: 1; /* Fully visible */
+}
+.music-item.side {
+    /* Styles for side slides */
+    transform: translateX(-100%); /* or 100%, depending on your layout */
+  }
+
+.music-item.left, .music-item.right {
+    transform: scale(0.8);
+    opacity: 0.5;
+}
+
+.music-item.hidden {
+    display: none; 
+}
+
+/* Play button and title visibility */
+.music-item .play-link,
+.music-item figcaption {
+    display: none; 
+}
+
+.music-item.center .play-link,
+.music-item.center figcaption {
+    display: block; 
+}
+  
 
 figcaption {
     text-align: center;
 }
+
+
+#footer.social {
+    text-align: center; /* This will center the inline-block elements */
+    position: relative; /* Positioning the footer at the bottom */
+    background: var(--background);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 0; /* Add padding to the top and bottom of the footer */
+}
+
+.social a:visited {
+    color: transparent; /* or set a specific color */
+    text-decoration: none; /* Removes underline */
+    outline: none; /* Removes the outline */
+}
+
+/* Individual social icons */
+.social-icon {
+    width: 30px; 
+    height: 30px;  
+    margin: 0 10px; /* Horizontal spacing between icons */
+    vertical-align: middle; /* Align the icons vertically if they have different heights */
+    display: inline-block; /* This allows for the use of text-align on the parent to center */
+}
+
+

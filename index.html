@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allison&family=Grape+Nuts&display=swap" rel="stylesheet">
+
+ 
+  
 </head>
 <body>
 
@@ -44,15 +47,24 @@
     </section>
     <!-- Music Section -->
     <section id="music" class="section">
-    <h2>Music</h2>
+        <h2 class ="section-title">Music</h2>
+        <div class="music-slider">
+            <button class="slide-btn"  id ="prev" onclick="slide(-1)">
+                <img src="images/next2.png" alt="Previous">
+            </button>        
+            <button class="slide-btn" id ="next" onclick="slide(1)">
+                <img src="images/next.png" alt="Next">
+            </button>
+            
+        </div>
         <ul class="music-list">
         <!-- Music Item 1 -->
-            <li class="music-item">
+            <!-- <li class="music-item">
                 <figure>
                     <img src="images/SoullessCover.jpeg" alt="Soulless Cover">
                     <figcaption>Soulless</figcaption>
                      <a href="https://lnk.to/soulless" class="play-link" target="_blank">
-                        <i class="fas fa-play play-icon"></i>
+                        <img src="images/play.png" alt="Play" class="play-icon">
                      </a>
                 </figure>
              </li>
@@ -61,8 +73,8 @@
                 <figure>
                     <img src="images/SoSCover.jpeg" alt="Album Cover 2">
                     <figcaption>SoS</figcaption>
-                     <a href="URL-TO-SONG-1" class="play-link" target="_blank">
-                        <i class="fas fa-play play-icon"></i>
+                     <a href="https://lnk.to/SoSbibi" class="play-link" target="_blank">
+                        <img src="images/play.png" alt="Play" class="play-icon">
                      </a>
                 </figure>
              </li>
@@ -71,35 +83,35 @@
                 <figure>
                     <img src="images/OverdoseCover.jpg" alt="Album Cover 3">
                     <figcaption>Overdose</figcaption>
-                    <a href="URL-TO-SONG-1" class="play-link" target="_blank">
-                        <i class="fas fa-play play-icon"></i>
+                    <a href="https://li.sten.to/tsd5kh3o" class="play-link" target="_blank">
+                        <img src="images/play.png" alt="Play" class="play-icon">
                     </a>
                 </figure>
-             </li>
+             </li> -->
         <!-- Repeat for each music item -->
       </ul>
     </section>
 
     <!-- Videos Section -->
     <section id="videos" class="section">
-        <h2>Videos</h2>
-        <video controls>
+        <h2 class ="section-title">Videos</h2>
+        <video ccontrols loop autoplay muted>
           <source src="images/SOULLESS.mov" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </section>
     <!-- Bio Section -->
     <section id="bio" class="section">
-    <h2>Bio</h2>
+    <h2 class ="section-title">Bio</h2>
     <!-- Add your biography content here -->
     <p>Add bio here</p>
     </section>
 
     <!-- Tour Section -->
     <section id="Tour" class="section">
-    <h2>Tour</h2>
+    <h2 class ="section-title">Tour</h2>
     <!-- Add your biography content here -->
-    <p>Add bio here</p>
+    <p>No Upcomming Events</p>
     <img src="path-to-your-tour-image.jpg" alt="Tour Image">
     </section>
    
@@ -122,7 +134,7 @@
     <!-- Add more social media links as needed -->
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
   
   </body>
 
