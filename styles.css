@@ -357,7 +357,7 @@ figcaption {
     
     .background-image {
     
-        object-position: center;
+        object-position: center center;
         object-fit: cover; 
     }
     
@@ -382,7 +382,7 @@ figcaption {
         font-size: 1.5rem; /* Even smaller font size for phones */
     }
     .title {
-        font-size: 3rem; /* Even smaller font size for phones */
+        font-size: 5rem; /* Even smaller font size for phones */
     }
     
     body{
@@ -407,7 +407,7 @@ figcaption {
     }
 
     .slide-btn{
-        bottom: 40%!important; 
+        bottom: 30%; 
     }
     
     .play-icon {
