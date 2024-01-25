@@ -19,11 +19,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         },
 
         {
-            imgage: "images/BleedingHearts.jpg",
-            title: "Bleeding Hearts",
-            link: "https://lnk.to/bleedinhearts"
-        },
-        {
             imgage: "images/AlienCover.jpeg",
             title: "Alien",
             link: "https://lnk.to/AlienBibi"
@@ -44,7 +39,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             imgage: "images/Lowcover.jpeg",
             title: "Low",
             link: "https://lnk.to/lowsisis"
-        }
+        },
+
+        {
+            imgage: "images/BleedingHearts.jpg",
+            title: "Bleeding Hearts",
+            link: "https://lnk.to/bleedinhearts"
+        },
         
     ];
 
