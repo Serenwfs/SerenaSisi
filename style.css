@@ -354,11 +354,11 @@ figcaption {
 /* Small screens (phones) */
 @media (max-width: 480px) {
     .title, .quote {
-        font-size: 4rem; /* Even smaller font size for phones */
+        font-size: 1rem; /* Even smaller font size for phones */
     }
     
     body{
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .nav-bar li {
