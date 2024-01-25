@@ -292,6 +292,13 @@ figcaption {
     padding: 1rem 0; /* padding to the top and bottom of the footer */
 }
 
+/* Set the color for links in the footer */
+#footer.social a {
+    color: var(--background); /* Set the default color for icons */
+    text-decoration: none; /* Removes underline */
+}
+
+
 .social a:visited {
     color: transparent;
     text-decoration: none; /* no underline */
@@ -430,6 +437,50 @@ figcaption {
         right: 35% ; /* adjust the position */
     }
     
+
+    /* Very large screens */
+@media (min-width: 1400px) {
+    .title, .quote {
+        font-size: 3rem; /* Larger font size for larger screens */
+    }
+    
+    .title {
+        font-size: 7rem; /* Larger title font size */
+        max-width: 1000px; /* Adjust max-width for larger screens */
+    }
+
+    .nav-bar li {
+        margin: 150px; /* More space between navigation items */
+        font-size: 2.5rem; /* Larger font size for nav items */
+    }
+    
+    .social-media-bar img, .social-icon {
+        width: 30px; /* Larger icons */
+        height: 30px;
+    }
+    
+    .slide-btn img, .play-icon {
+        height: 50px; /* Larger buttons */
+        width: auto;
+    }
+    
+    .music-item img {
+        width: 300px; /* Larger music item images */
+        height: 300px;
+    }
+
+    .background-image {
+        object-position: left 0 top 15%; /* Adjust object position if needed */
+        object-fit: cover; /* Cover the entire section */
+    }
+    
+    body {
+        font-size: 2.5rem; /* Larger base font size */
+    }
+
+
+}
+
 
 }
 
