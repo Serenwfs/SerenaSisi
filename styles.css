@@ -314,7 +314,7 @@ figcaption {
     display: inline-block; 
 }
 
-/*ADJUST CSS FOR DIFFERNET SIZE SCREEM */
+/*MEDIA QUIERIES DJUST CSS FOR DIFFERNET SIZE SCREEM */
 
 /* Medium screens */
 @media (max-width: 768px) {
@@ -438,10 +438,10 @@ figcaption {
     }
 
     .slide-btn:hover, .play-link:hover, #prev:hover, #next:hover {
-        background-color: transparent; /* grey color with opacity */
-        transition:none; 
-        opacity: 1; /*over opacity*/
-        z-index: 1;
+        background-color: transparent; /* Reset background color */
+        opacity: 1; /* Reset opacity to default */
+        transition: none; /* Remove transition */
+       
     }
 }
     
