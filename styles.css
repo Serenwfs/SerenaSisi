@@ -399,7 +399,7 @@ figcaption {
 
     .background-image {
         object-position: center; 
-        object-fit: center; 
+        object-fit: cover; 
     }
     .slide-btn img{
         height: 5vw !important; 
