@@ -407,7 +407,7 @@ figcaption {
     }
 
     .slide-btn{
-        bottom: 25%; 
+        bottom: 30%; 
     }
     
     .play-icon {
@@ -435,6 +435,11 @@ figcaption {
       
     #next {
         right: 35% ; /* adjust the position */
+    }
+
+    .slide-btn:hover, .play-link:hover, #prev:hover, #next:hover {
+        transition: background-color 0.3s ease; 
+        z-index: 12;
     }
 }
     
