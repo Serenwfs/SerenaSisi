@@ -459,6 +459,9 @@ figcaption {
         height: 30px;
     }
     
+    .slide-btn{
+        bottom:  35%; 
+    }
     .slide-btn img, .play-icon {
         height: 50px; /* Larger buttons */
         width: auto;
@@ -476,6 +479,11 @@ figcaption {
     
     body {
         font-size: 2.5rem; /* Larger base font size */
+    }
+
+    #Tour p{
+        font-size: 4rem;
+        
     }
 
 
