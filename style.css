@@ -304,7 +304,7 @@ figcaption {
 /* Medium screens (tablets) */
 @media (max-width: 768px) {
     .title, .quote {
-        font-size: 4rem; /* Smaller font size for smaller screens */
+        font-size: 2rem; /* Smaller font size for smaller screens */
     }
     
     .nav-bar li {
@@ -323,8 +323,8 @@ figcaption {
     }
 
     .play-icon {
-        height: 4vw !important; /* Adjust the size based on the viewport width */
-        width: 4vw !important;
+        height: 2vw !important; /* Adjust the size based on the viewport width */
+        width: 2vw !important;
     }
     .music-item img {
         width: 150px;
@@ -339,6 +339,9 @@ figcaption {
         max-width: 600px; /* Full width on small screens */
     }
     
+    .background-image {
+        height: 50vh; /* Reduce the height on medium screens */
+    }
 
 
 
@@ -348,7 +351,7 @@ figcaption {
 /* Small screens (phones) */
 @media (max-width: 480px) {
     .title, .quote {
-        font-size: 2rem; /* Even smaller font size for phones */
+        font-size: 1rem; /* Even smaller font size for phones */
     }
     
     .nav-bar li {
@@ -357,6 +360,10 @@ figcaption {
     
     .social-media-bar {
         width: 30px; /* Smaller social bar for phones */
+    }
+
+    .background-image {
+        height: 30vh; /* Further reduce the height on small screens */
     }
     .slide-btn img{
         height: 5vw !important; /* Larger percentage to maintain a usable size on small screens */
