@@ -220,8 +220,6 @@ box-sizing: border-box;
     transition: transform 0.5s; 
 }
 
-
-
 .play-link {
     position: absolute; /* Position it absolutely within the figure */
     bottom: -18%; /* Position it 50% from the top */
@@ -265,7 +263,6 @@ box-sizing: border-box;
 .music-item.center figcaption {
     display: block; 
 }
-  
 
 figcaption {
     text-align: center;
@@ -297,10 +294,13 @@ figcaption {
     display: inline-block; /* This allows for the use of text-align on the parent to center */
 }
 
-
-/* Base styles - these apply on all devices */
-
-/* ... Your existing CSS ... */
+#bio p{
+    font-family: "Caveat", cursive;
+    padding-top: calc(1*var(--spacing-unit));
+    font-size: 1rem;
+    margin-left: auto; /*similarly to the tile we adjust the margin*/
+    margin-right: auto;
+}
 
 /* Medium screens (tablets) */
 @media (max-width: 768px) {
