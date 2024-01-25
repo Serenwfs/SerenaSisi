@@ -196,7 +196,6 @@ box-sizing: border-box;
     list-style-type: none;
     padding: 2rem;
     display: flex;
-    flex-wrap: wrap;
     text-align: center; 
     flex-direction: row;
     justify-content: center;
@@ -296,6 +295,61 @@ figcaption {
     margin: 0 10px; /* Horizontal spacing between icons */
     vertical-align: middle; /* Align the icons vertically if they have different heights */
     display: inline-block; /* This allows for the use of text-align on the parent to center */
+}
+
+
+/* Base styles - these apply on all devices */
+
+/* ... Your existing CSS ... */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .title, .quote {
+        font-size: 4rem; /* Smaller font size for smaller screens */
+    }
+    
+    .nav-bar li {
+        margin: 25px; /* Less space between navigation items */
+    }
+    
+    .social-media-bar img, .social-icon {
+        width: 20px; 
+        height: 20px;
+    }
+
+    .music-item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Adjust padding, margins, and any other properties that need to change */
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .title, .quote {
+        font-size: 2rem; /* Even smaller font size for phones */
+    }
+    
+    .nav-bar li {
+        margin: 10px; /* Even less space between navigation items */
+    }
+    
+    .social-media-bar {
+        width: 30px; /* Smaller social bar for phones */
+    }
+
+    .music-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .slide-btn img {
+        height: 30px;
+        width: 30px;
+    }
+
+    /* Continue adjusting styles as needed */
 }
 
 

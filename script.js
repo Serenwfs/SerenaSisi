@@ -19,18 +19,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
         {
             imgUrl: "images/BleedingHearts.jpg",
             title: "Bleeding Hearts",
-            link: "https://li.sten.to/tsd5kh3o"
+            link: "https://lnk.to/bleedinhearts"
         },
         {
             imgUrl: "images/AlienCover.jpeg",
             title: "Alien",
-            link: "https://li.sten.to/tsd5kh3o"
+            link: "https://lnk.to/AlienBibi"
         },
         {
             imgUrl: "images/HeartOfGlassCover.jpeg",
             title: "Heart Of Glass",
             link: "https://li.sten.to/tsd5kh3o"
         },
+
+        {
+            imgUrl: "images/psychosisCover.jpeg",
+            title: "Psychosis ?",
+            link: "https://lnk.to/psychosisSisi"
+        },
+
+        {
+            imgUrl: "images/Lowcover.jpeg",
+            title: "Low",
+            link: "https://lnk.to/lowsisis"
+        }
         
         // Add more slides as needed
     ];
@@ -63,17 +75,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Create an array of slide indexes in the order they should be displayed
         let slideIndexes = [leftSlideIndex, currentSlideIndex, rightSlideIndex];
-
-        // If we're at the start or end of the carousel, adjust the array accordingly
-        // if (currentSlideIndex === 0) {
-        //     // Place the last slide to the left of the first slide
-        //     slideIndexes.unshift(slidesData.length - 1);
-        // }
-            
-        // } else if (currentSlideIndex === slidesData.length - 1) {
-        //     // Place the first slide to the right of the last slide
-        //     slideIndexes.push(0);
-        // }
 
         // Append each slide to the music list with the correct class
         slideIndexes.forEach((index) => {
