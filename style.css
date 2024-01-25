@@ -356,10 +356,10 @@ figcaption {
 /* Small screens (phones) */
 @media (max-width: 480px) {
     .quote {
-        font-size: 3rem; /* Even smaller font size for phones */
+        font-size: 2rem; /* Even smaller font size for phones */
     }
-    .quote {
-        font-size: 1rem; /* Even smaller font size for phones */
+    .title {
+        font-size: 7rem; /* Even smaller font size for phones */
     }
     
     body{
