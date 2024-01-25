@@ -379,14 +379,14 @@ figcaption {
 /* Small screens  */
 @media (max-width: 480px) {
     .quote {
-        font-size: 1.5rem; /* Even smaller font size for phones */
+        font-size: 1.4rem; /* Even smaller font size for phones */
     }
     .title {
         font-size: 5rem; /* Even smaller font size for phones */
     }
     
     body{
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .nav-bar li {
@@ -407,7 +407,7 @@ figcaption {
     }
 
     .slide-btn{
-        bottom: 30%; 
+        bottom: 25%; 
     }
     
     .play-icon {
