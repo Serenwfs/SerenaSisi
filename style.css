@@ -9,7 +9,6 @@ background-color: var(--background);
 margin: 0;
 }
 
-
 .section {
     position: relative; /* Allows absolute positioning relative to this container */
     height: 100vh;
@@ -57,7 +56,7 @@ margin: 0;
 .title {
     /* position: absolute;  */
     font-size: 6rem;
-    max-width: 800px;
+    max-width: 700px;
     top: 40%; /* Adjust the value to position the quote from the top of the page */
     /* left: 50%;  */
 }
@@ -317,10 +316,31 @@ figcaption {
         height: 20px;
     }
 
+
+    .slide-btn img{
+        height: 3vw !important; /* Adjust the size based on the viewport width */
+        width: 3vw !important;
+    }
+
+    .play-icon {
+        height: 4vw !important; /* Adjust the size based on the viewport width */
+        width: 4vw !important;
+    }
     .music-item img {
         width: 150px;
         height: 150px;
     }
+    .video-container {
+        max-width: 600px; /* Slightly smaller max width */
+    }
+
+
+     #videos video {
+        max-width: 600px; /* Full width on small screens */
+    }
+    
+
+
 
     /* Adjust padding, margins, and any other properties that need to change */
 }
@@ -338,6 +358,15 @@ figcaption {
     .social-media-bar {
         width: 30px; /* Smaller social bar for phones */
     }
+    .slide-btn img{
+        height: 5vw !important; /* Larger percentage to maintain a usable size on small screens */
+        width: 5vw !important;
+    }
+    
+    .play-icon {
+        height: 2vw !important; /* Adjust the size based on the viewport width */
+        width: 2vw !important;
+    }
 
     .music-item img {
         width: 100px;
@@ -349,7 +378,11 @@ figcaption {
         width: 30px;
     }
 
-    /* Continue adjusting styles as needed */
+    #videos video {
+        max-width:100%; /* Adjust max-width for medium screens */
+    }
+
+
 }
 
 
