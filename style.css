@@ -169,7 +169,7 @@ box-sizing: border-box;
 .slide-btn {
     position: absolute;
     bottom: 20%; 
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     border: none;
     background: none;
     cursor: pointer; 
@@ -178,15 +178,15 @@ box-sizing: border-box;
 
 .slide-btn img{
     height: 40px;
-    width: 40px;
+    width: auto;
 }
   
   #prev {
-    left: 42% ; /* Adjust the position as needed */
+    left: 38% ; /* Adjust the position as needed */
   }
   
   #next {
-    right: 42% ; /* Adjust the position as needed */
+    right: 38% ; /* Adjust the position as needed */
   }
   
 
@@ -215,10 +215,11 @@ box-sizing: border-box;
     height: 235px;
     right: 50%;
     left: auto;
-     display: block;
+    display: block;
      z-index: 7;
     transition: transform 0.5s; 
 }
+
 
 
 .play-link {
@@ -322,6 +323,9 @@ figcaption {
         width: 3vw !important;
     }
 
+    .slide-btn{
+        bottom: 30%; 
+    }
     .play-icon {
         height: 2vw !important; /* Adjust the size based on the viewport width */
         width: 2vw !important;
@@ -333,8 +337,6 @@ figcaption {
     .video-container {
         max-width: 600px; /* Slightly smaller max width */
     }
-
-
      #videos video {
         max-width: 600px; /* Full width on small screens */
     }
@@ -349,6 +351,14 @@ figcaption {
         font-size: 4vw;
     }
 
+    #prev {
+        left: 35% ; /* Adjust the position as needed */
+      }
+      
+    #next {
+        right: 35% ; /* Adjust the position as needed */
+    }
+    
 
     /* Adjust padding, margins, and any other properties that need to change */
 }
@@ -383,10 +393,14 @@ figcaption {
         height: 5vw !important; /* Larger percentage to maintain a usable size on small screens */
         width: 5vw !important;
     }
+
+    .slide-btn{
+        bottom: 35%; 
+    }
     
     .play-icon {
-        height: 2vw !important; /* Adjust the size based on the viewport width */
-        width: 2vw !important;
+        height: 3vw !important; /* Adjust the size based on the viewport width */
+        width: 3vw !important;
     }
 
     .music-item img {
@@ -395,14 +409,22 @@ figcaption {
     }
 
     .slide-btn img {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
     }
 
     #videos video {
         max-width:100%; /* Adjust max-width for medium screens */
     }
 
+    #prev {
+        left: 35% ; /* Adjust the position as needed */
+      }
+      
+    #next {
+        right: 35% ; /* Adjust the position as needed */
+    }
+    
 
 }
 
