@@ -1,0 +1,436 @@
+html,
+*{ 
+    /*Dleclare variables throughout the file*/
+    --background: #000000;
+    --light: #ffedfd;
+    --spacing-unit: 8px;
+    --hover: #8d0b32;
+    background-color: var(--background);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.section {
+    position: relative; /* Allows makes each contain relative so make th other components relative to them */
+    height: 100vh; /* have the section be the size of the scree */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0; /* set the marging to zero again section */
+    padding: 0; 
+}
+
+.section-title {
+    position: absolute;
+    top: 2%; /* Adjust the height */
+    background: transparent; 
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    font-family: "Allison", cursive;
+    color: var(--light);
+    font-size: 2rem;  
+   
+  }
+
+
+ /* HOME SECTION */
+
+ .background-image {
+    width: 100%; /* Make sure that the immage is fits the whole page */
+    height: 100vh;
+    object-fit: cover; /* make sure that it covers the proporsions are right*/
+    position: relative;  /* make it to replative to place it with repect to the section */
+    /* Fix the postion of the image */
+    object-position: left 0  top 15%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Behind the text*/
+}
+
+.title, .quote {
+    position: absolute;
+    background-color: transparent; /* no background */
+    padding: 0; /* no padding */
+    margin: 0; /* no margin */
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote {
+    position: absolute ;
+    top: 1%; /* Adjust the position to top of the page */
+    z-index: 6; /* bove other content */
+    padding: 0; /* No padding around the text */
+    font-size: 2.1rem;
+}
+.title {
+    font-size: 6rem;
+    max-width: 700px;
+    top: 40%; /* make sure it's in the middle */
+}
+
+ /* socila media bar */
+.social-media-bar {
+    position: absolute;
+    background: transparent; 
+    right: 0;
+    width: 40px;   /* Make sure the bar have the right width */
+    height: 100%;
+    z-index: 2; 
+     /* Flex column*/
+    display: flex; 
+    flex-direction: column;
+  }
+  
+
+.social-media-bar img { 
+    /* images is in the right size => square */ 
+    width: 25px;  
+    height: 25px;  
+    margin: 20px 0; 
+    z-index: 2; 
+    background: transparent;
+  }
+
+/*NAVIGATION BAR HOME SECTION*/
+
+.nav-bar {
+    position: absolute;
+    list-style-type: none; /* Remove the list attribute*/
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: row;
+    left: 0;
+    bottom: 0%; /* position it at the bottom of the section*/
+    width: 100%;
+    height: 50px;
+    background: var(--light); /* This is the pink color from the title and quote */
+    z-index: 10;
+}
+
+.nav-bar li {
+    margin: 125px; /* space between navigation titles */
+    background: transparent; /* no background color */
+    font-size: 2.3rem;
+    z-index: 10;
+}
+
+.nav-bar a {
+    color: var(--background); /* Black text color */
+    text-decoration: none; /* No underline */
+    padding: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: transparent;
+}
+
+.nav-bar a:visited {
+    background: transparent; /* No background color acter visited*/
+}
+
+/* active state */
+.nav-bar a:active {
+    background: transparent; /* No background color */
+}
+
+
+/* hover state */
+.nav-bar a:hover {
+    background: transparent; 
+    color: var(--hover); /* make it another color */
+}
+  
+
+/*MUSIC SECTION*/
+
+/* next right button*/
+.slide-btn {
+    position: absolute;
+    bottom: 15%; 
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    background: none;
+    cursor: pointer; 
+    z-index: 15; /* Make sure this is above other elements */
+  }
+
+.slide-btn img{
+    height: 40px;
+    width: auto;
+    background: transparent;
+}
+
+  
+  #prev {
+    left: 38% ; /* Adjust the position left*/
+  }
+  
+  #next {
+    right: 38% ; /* Adjust the position right */
+  }
+  
+.music-list {
+    list-style-type: none; /*no bullet points*/
+    padding: 2rem;
+    display: flex;
+    text-align: center; 
+    flex-direction: row; /*have the music list in a row*/
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.music-item {
+    position: relative; /* need to position the play button absolutely */
+    display: flex; /* Use flexbox to center */
+    align-items: center; /* Center */
+    justify-content: center; /* Center horizontally */
+}
+
+.play-link {
+    position: absolute; /* absolutely within the figure */
+    bottom: -18%; /* Position it -18% from the botom of the image*/
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: none; /* hbide by default to show show only for the center item */
+    z-index: 3; 
+    background: transparent;
+}
+ /* play icon image */
+ .play-icon {
+    width: 25px !important;
+    height: 25px !important;
+    background: transparent;
+  }
+
+.music-item img {
+    width: 250px; /*adjust the size of the images*/
+    height: 250px;
+    right: 50%;
+    left: auto;
+    display: block;
+    z-index: 7;
+    transition: transform 0.5s; 
+    background: transparent;
+}
+
+
+.slide-btn:hover, .play-link:hover, #prev:hover, #next:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* grey color with opacity */
+    transition: background-color 0.3s ease; 
+    opacity: 0.1; /*over opacity*/
+    z-index: 12;
+}
+/*for the carousel javascript need to make center image bigger the side images smaler and less visible */
+.music-item.center {
+    transform: scale(1.4);
+    z-index: 2; 
+    opacity: 1; /* Fully visible */
+}
+
+
+.music-item.left, .music-item.right {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.music-item.hidden {
+    display: none; 
+}
+
+/* Play button and titlneed to only be visible for the center image */
+.music-item .play-link,
+.music-item figcaption {
+    display: none; 
+}
+
+.music-item.center .play-link,
+.music-item.center figcaption {
+    
+    display: block; 
+}
+
+figcaption {
+    text-align: center;
+}
+
+/*BIO SECTION*/
+#bio p{
+    font-family: "Oregano", cursive;
+    padding-top: calc(1*var(--spacing-unit));
+    font-size: 1.rem;
+    margin-left: auto; /*similarly to the tile we adjust the margin*/
+    margin-right: auto;
+    max-width: 1000px;
+}
+/*TOUR SECTION*/
+#Tour p{
+    font-family: "Caveat", cursive;
+    font-size: 2.8rem;
+    margin-left: auto; /*similarly to the tile we adjust the margin*/
+    margin-right: auto;
+}
+
+/*FOOTER*/
+
+/*last social media bar at the bottom*/
+#footer.social {
+    text-align: center; 
+    position: relative; /* Positioning at the bottom */
+    background: var(--background);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 0; /* padding to the top and bottom of the footer */
+}
+
+.social a:visited {
+    color: transparent;
+    text-decoration: none; /* no underline */
+    outline: none; /* no outline */
+}
+
+/* Individual social icons */
+.social-icon {
+    width: 30px; 
+    height: 30px;  
+    margin: 0 10px; /*  spacing between icons */
+    vertical-align: middle; 
+    display: inline-block; 
+}
+
+/*ADJUST CSS FOR DIFFERNET SIZE SCREEM */
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .title, .quote {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+    
+    .nav-bar li {
+        margin: 25px; /* less space between navigation items */
+    }
+    
+    .social-media-bar img, .social-icon {
+        width: 20px; 
+        height: 20px;
+    }
+
+
+    .slide-btn img{
+        height: 3vw !important; /* ajust the size based on the width*/
+        width: 3vw !important;
+    }
+
+    .slide-btn{
+        bottom:  25%; 
+    }
+    .play-icon {
+        height: 2vw !important; /* Adjust the size based on the width */
+        width: 2vw !important;
+    }
+    .music-item img {
+        width: 150px;
+        height: 150px;
+    }
+    .video-container {
+        max-width: 600px; /* smaller max width */
+    }
+     #videos video {
+        max-width: 600px; /* full width on small screens */
+    }
+    
+    .background-image {
+    
+        object-position: center center;
+        object-fit: cover; 
+    }
+    
+    body{
+        font-size: 4vw;
+    }
+
+    #prev {
+        left: 35% ; /* Adjust the position */
+      }
+      
+    #next {
+        right: 35% ; 
+    }
+    
+
+}
+
+/* Small screens  */
+@media (max-width: 480px) {
+    .quote {
+        font-size: 1.5rem; /* Even smaller font size for phones */
+    }
+    .title {
+        font-size: 5rem; /* Even smaller font size for phones */
+    }
+    
+    body{
+        font-size: 6vw;
+    }
+
+    .nav-bar li {
+        margin: 10px; /* Even less space between navigation things*/
+    }
+    
+    .social-media-bar {
+        width: 30px; /* Smaller social bar for phones */
+    }
+
+    .background-image {
+        object-position: center center; 
+        object-fit: cover; 
+    }
+    .slide-btn img{
+        height: 5vw !important; 
+        width: 5vw !important;
+    }
+
+    .slide-btn{
+        bottom: 30%; 
+    }
+    
+    .play-icon {
+        height: 3vw !important; /* Adjust the size based on the width */
+        width: 3vw !important;
+    }
+
+    .music-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .slide-btn img {
+        height: 35px;
+        width: 35px;
+    }
+
+    #videos video {
+        max-width:100%; /* adjust max-width for smallscreens */
+    }
+
+    #prev {
+        left: 35% ; /* Adjust the position*/
+      }
+      
+    #next {
+        right: 35% ; /* adjust the position */
+    }
+    
+
+}
+
+

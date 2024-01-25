@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Music Website</title>
-<link href="https://fonts.googleapis.com/css2?family=Allison&family=Caveat:wght@400..700&family=Grape+Nuts&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles.css"> <!--import the style sheet-->
+<!--links to google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allison&family=Caveat:wght@400..700&family=Grape+Nuts&family=Oregano:ital@0;1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Allison&family=Grape+Nuts&display=swap" rel="stylesheet">
 
- 
-  
 </head>
 <body>
-
 <header >   
     <ul class = "nav-bar ">
       <li><a href="#music">Music</a></li>
@@ -24,25 +21,28 @@
     </ul>
   </nav>
 </header>
+
 <main>
+  <!--Home page section-->
     <section id="home" class="section">
-        <img src="images/home.jpg" alt="Home Image" class="background-image">
-        <div class="text">
+        <img src="images/home.jpg" alt="Home Image" class="background-image"> <!--background image-->
+        <div class="text"> 
             <h2 class="title">Serena</h2>
             <p class="quote">I've fallen, why are angels flying ?</p>
         </div>
-        <div class="social-media-bar">
+        <!--side navigation bar for Social media-->
+        <div class="social-media-bar"> 
             <a href="https://www.instagram.com/serena_wfs/" target="_blank">
-                <img src="images/InstagramLogo.png" alt="Instagram Logo" class="social-icon">
+                <img src="images/InstagramLogo.png" alt="Instagram Logo snif" class="social-icon">
               </a>
               <a href="https://youtube.com/@serenaw5090?si=Ma2E7iniW9P39cau" target="_blank">
-                <img src="images/YoutubeLogo.png" alt="Youtube Logo" class="social-icon">
+                <img src="images/YoutubeLogo.png" alt="Youtube Logo snif" class="social-icon">
               </a>
               <a href="https://open.spotify.com/artist/6sACj5JYUfuBMwjTOg8sim?si=NbbvzFVdSgybeKF6IbVHgg" target="_blank">
-                <img src="images/SpotifyLogo.png" alt="Spotify Logo" class="social-icon">
+                <img src="images/SpotifyLogo.png" alt="Spotify Logo snif" class="social-icon">
               </a>
               <a href="https://www.tiktok.com/@serenawfs?_t=8jHXQ6v4emm&_r=1" target="_blank">
-                  <img src="images/tiktokLogo.png" alt="Tiktok logo" class="social-icon">
+                  <img src="images/tiktokLogo.png" alt="Tiktok logo snif" class="social-icon">
             </a>
         </div>
     </section>
@@ -50,43 +50,44 @@
     <section id="music" class="section">
         <h2 class ="section-title">Music</h2>
         <div class="music-slider">
+          <!--DFGHJKJHGFGHJIKL-->
             <button class="slide-btn"  id ="prev" onclick="slide(-1)">
                 <img src="images/next2.png" alt="Previous">
             </button>        
             <button class="slide-btn" id ="next" onclick="slide(1)">
                 <img src="images/next.png" alt="Next">
-            </button>
-            
+            </button>      
         </div>
+      <!-- Put the list with the songs in java script-->
         <ul class="music-list">
-      </ul>
+        </ul>
     </section>
 
     <!-- Videos Section -->
     <section id="videos" class="section">
         <h2 class ="section-title">Videos</h2>
+        <!--Start code from chat gpt to get the video to autoplay-->
         <video ccontrols loop autoplay muted>
+        <!--End code from source-->
           <source src="images/SOULLESS.mov" type="video/mp4">
-          Your browser does not support the video tag.
+          Your browser does not support the video sniff
         </video>
       </section>
-    <!-- Bio Section -->
+    <!-- Bio Section --> 
     <section id="bio" class="section">
     <h2 class ="section-title">Bio</h2>
-    <!-- Add your biography content here -->
     <p>Serena is an independent artist whose music is as eclectic as her background. Originally from France, her life's journey through five different countries, including Africa and the United States, has deeply influenced her sound. With over 13 years of experience, Serena's music seamlessly blends alternative R&B and pop with the diverse rhythms of her travels.
 
       Her passion for music started in her childhood, surrounded by the melodies of her guitar-playing father and the rich tapestry of Cameroonian, African, and French variety music. Serena's songs are a reflection of her life experiences, exploring themes of love, mental health, and the joys and complexities of human emotion. Each track she writes is an intimate glimpse into her world, inviting listeners to connect and find a piece of themselves in her music.
       
-      As much as her music is about storytelling, it's also about connecting. Serena believes in the power of music to transcend barriers and bring people together. With a love for the unconventional, including a fascination with aliens, her artistry is a blend of the familiar and the extraordinary.
+      As much as her music is about storytelling, it's also about connecting. Serena believes in the power of music to transcend barriers and bring people together. With a love for the unconventional, her artistry is a blend of the familiar and the extraordinary.
       
-      Join Serena on her musical journey, where every note tells a story, and every song is an invitation to experience the world through her eyes and heart.</p>
+      Join Serena on her musical journey, where every note tells a story. -Love Alien</p>
     </section>
 
     <!-- Tour Section -->
     <section id="Tour" class="section">
     <h2 class ="section-title">Tour</h2>
-    <!-- Add your biography content here -->
     <p>No Upcomming Events</p>
     </section>
    
@@ -106,10 +107,9 @@
     <a href="https://www.tiktok.com/@serenawfs?_t=8jHXQ6v4emm&_r=1" target="_blank">
         <img src="images/tiktokLogo.png" alt="Tiktok logo" class="social-icon">
     </a>
-    <!-- Add more social media links as needed -->
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
   
   </body>
 
