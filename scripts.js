@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function createSlideElement(slide) {
         const li = document.createElement("li");
         li.className = "music-item";
-        // Start code chat of how to include HTML 
+        // Start code chat gpt of how to include HTML 
         li.innerHTML = `
             <figure>
                 <img src="${slide.imgage}" alt="${slide.title}">
@@ -71,16 +71,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function updateSlides() {
         const musicList = document.querySelector(".music-list");
-        musicList.innerHTML = ''; // Clear existing slides
+        musicList.innerHTML = ''; // we clear existing slides
 
-        // Define the indexes for the left and right slides
+        // indexes for the left and right slides
         let leftSlideIndex = (currentSlideIndex - 1 + slidesData.length) % slidesData.length;
         let rightSlideIndex = (currentSlideIndex + 1) % slidesData.length;
 
-        // Create an array of slide indexes in the order they should be displayed
+        // we create an array of slide indexes in the order they should be displayed
         let slideIndexes = [leftSlideIndex, currentSlideIndex, rightSlideIndex];
 
-        // Append each slide to the music list with the correct class
+        // append each slide to the music list with the correct class
         slideIndexes.forEach((index) => {
             const slideElement = createSlideElement(slidesData[index]);
             if (index === currentSlideIndex) {
@@ -95,22 +95,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
     
     function moveSlide(direction) {
-        // Adjust currentSlideIndex based on direction
+        // adjust the index based on direction
         if (direction === 1) {
-            // Moving to the next slide
+            // switch the next slide
             currentSlideIndex = (currentSlideIndex + 1) % slidesData.length;
         } else {
-            // Moving to the previous slide
+            // switch the prev slide
             currentSlideIndex = (currentSlideIndex - 1 + slidesData.length) % slidesData.length;
         }
 
         updateSlides();
     }
 
-    // Set up event listeners for next and previous buttons
+    // set up previous and next  buttons
     document.querySelector("#next").addEventListener("click", () => moveSlide(1));
     document.querySelector("#prev").addEventListener("click", () => moveSlide(-1));
 
-    // Initialize the slider with the first slide
+    // initialize the slider 
     updateSlides();
 });
