@@ -426,7 +426,7 @@ figcaption {
     }
 
     #videos video {
-        max-width:100%; /* adjust max-width for smallscreens */
+        max-width:100%; 
     }
 
     #prev {
@@ -446,24 +446,24 @@ figcaption {
 }
     
 
-    /* Very large screens */
-@media (min-width: 1500px) {
+    
+@media (min-width: 1600px) {
     .title, .quote {
-        font-size: 3rem; /* Larger font size for larger screens */
+        font-size: 3rem; 
     }
     
     .title {
-        font-size: 7rem; /* Larger title font size */
-        max-width: 1000px; /* Adjust max-width for larger screens */
+        font-size: 7rem; 
+        max-width: 1000px; /* ajust max-width for larger screens */
     }
 
     .nav-bar li {
-        margin: 150px; /* More space between navigation items */
+        margin: 150px; 
         font-size: 2.5rem; /* Larger font size for nav items */
     }
     
     .social-media-bar img, .social-icon {
-        width: 30px; /* Larger icons */
+        width: 30px; 
         height: 30px;
     }
     
@@ -471,7 +471,7 @@ figcaption {
         bottom: 20%; 
     }
     .slide-btn img, .play-icon {
-        height: 50px; /* Larger buttons */
+        height: 50px; /* larger buttons */
         width: auto;
     }
     
@@ -481,12 +481,12 @@ figcaption {
     }
 
     .background-image {
-        object-position: left 0 top 15%; /* Adjust object position if needed */
-        object-fit: cover; /* Cover the entire section */
+        object-position: left 0 top 15%; 
+        object-fit: cover; /* cover the entire section */
     }
     
     body {
-        font-size: 2.5rem; /* Larger base font size */
+        font-size: 2.5rem; /* larger base font size */
     }
 
     #Tour p{
